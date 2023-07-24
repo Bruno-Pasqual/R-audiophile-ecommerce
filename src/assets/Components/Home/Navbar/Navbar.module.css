@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
+  border-bottom: 1px solid grey;
 }
 
 .company_logo {
@@ -73,6 +74,10 @@
     font-weight: 700;
     line-height: 25px; /* 192.308% */
     letter-spacing: 2px;
+  }
+
+  a:hover {
+    color: #d87d4a;
   }
 
   .cart_icon {

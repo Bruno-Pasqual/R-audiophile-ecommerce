@@ -1,0 +1,45 @@
+.highlight_container {
+}
+
+.zx9_container {
+  height: 600px;
+  width: 327px;
+  outline: 1px solid red;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #d87d4a;
+  position: relative;
+}
+
+.highlight_title {
+  color: #fff;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px; /* 111.111% */
+  letter-spacing: 1.286px;
+  text-transform: uppercase;
+}
+
+.highlight_text {
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  font-weight: 500;
+  line-height: 25px;
+  opacity: 0.75;
+  margin: 24px 0;
+}
+
+.zx9_img_container {
+  margin: 55px auto 32px auto;
+  height: 207px;
+  width: 172.25px;
+  background-image: url('/public/assets/home//mobile/image-speaker-zx9.png');
+  background-position: center;
+  background-size: cover;
+}

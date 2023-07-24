@@ -1,5 +1,5 @@
 const HeadPhones = () => {
-  return <div>HeadPhones</div>;
+  return <div className="headphones-container">HeadPhones</div>;
 };
 
 export default HeadPhones;
