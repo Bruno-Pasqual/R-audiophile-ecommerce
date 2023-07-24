@@ -1,0 +1,18 @@
+.hamburguer_menu {
+  width: 16px;
+  height: 15px;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburguer_line {
+  height: 3px;
+  width: 16px;
+  background: white;
+}
+
+.hamburguer_line.active:first-child {
+  background: red;
+}
