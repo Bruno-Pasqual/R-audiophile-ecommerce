@@ -1,4 +1,5 @@
 import { useGlobalContext } from '../../Context';
+import BringingContainer from '../BringingContainer/bringingContainer';
 import CategoryContainer from '../CategoryContainer/CategoryContainer';
 import Footer from '../Footer/Footer';
 import HighlightsContainer from '../HighlightsContainer/HighlightsContainer';
@@ -15,6 +16,7 @@ const Home = () => {
         <CategoryContainer />
         <HighlightsContainer />
       </main>
+      <BringingContainer />
       <Footer />
     </div>
   );

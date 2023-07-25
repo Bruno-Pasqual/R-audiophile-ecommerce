@@ -8,8 +8,12 @@
   align-items: center;
   max-width: 375px;
   margin: 0 auto;
-  border: 1px solid red;
   position: relative;
+  background: #101010;
+}
+
+.footer_wrapper {
+  background: #101010;
 }
 
 .titulo {

@@ -1,0 +1,105 @@
+.bringing_container {
+  width: 100%;
+  background: white;
+  margin: 120px 0;
+}
+
+.bringing_center {
+  max-width: 327px;
+  margin: 0 auto;
+}
+
+.img_container {
+  width: 327px;
+  height: 300px;
+  background-image: url('/public/assets/shared/mobile/image-best-gear.jpg');
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+}
+.container_title {
+  color: #000;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.container_title span {
+  color: #d87d4a;
+}
+
+.details_container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+.bringing_text {
+  color: #000;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+  opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+  .bringing_container {
+    margin: 96px 0;
+  }
+
+  .bringing_center {
+    max-width: 689px;
+  }
+
+  .details_container {
+    width: 573px;
+    margin: 63px auto 0 auto;
+  }
+
+  .img_container {
+    width: 689px;
+  }
+
+  .img_container {
+    width: 689px;
+    background-image: url('/public/assets/shared/tablet/image-best-gear.jpg');
+  }
+}
+
+@media (min-width: 1440px) {
+  .bringing_container {
+    margin: 200px 0;
+  }
+
+  .bringing_center {
+    max-width: 1110px;
+    height: 588px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .details_container {
+    margin-top: 0;
+    width: 445px;
+    height: 295px;
+  }
+
+  .container_title {
+    text-align: left;
+  }
+
+  .bringing_text {
+    text-align: left;
+  }
+
+  .img_container {
+    width: 540px;
+    height: 588px;
+    background-image: url('/public/assets/shared/desktop/image-best-gear.jpg');
+  }
+}

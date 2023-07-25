@@ -1,28 +1,109 @@
-/* .highlight_container {
+.highlight_container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  margin: 127px auto 0px auto;
+  max-width: 1440px;
+  align-items: center;
 }
- */
+
+.zx9_details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ! yx1 container */
+
+.yx1_details {
+  background: #f1f1f1;
+  width: 327px;
+  height: 200px;
+  display: flex;
+  row-gap: 32px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25.5px;
+  border-radius: 8px;
+}
+
+.yx1_container {
+  width: 327px;
+  height: 424px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.yx1_title {
+  color: #000;
+  font-family: Manrope;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.yx1_img {
+  width: 327px;
+  height: 200px;
+  background-image: url('/public/assets/home/mobile/image-earphones-yx1.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+/* ! yx1 container */
+
+/* ! ZX7 speaker --- */
+
+.zx7_container {
+  width: 327px;
+  height: 320px;
+
+  background-image: url('/public/assets/home/mobile/image-speaker-zx7.jpg');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 32px;
+  padding-left: 24px;
+  border-radius: 8px;
+}
+
+.zx7_title {
+  color: #000;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  /* margin: 101px 0px 32px 24px; */
+}
+
+/* ! ZX7 speaker --- */
+
 .zx9_container {
   height: 600px;
   width: 327px;
-  outline: 1px solid red;
   padding: 0 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #d87d4a;
   position: relative;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .highlight_title {
   color: #fff;
   text-align: center;
-  font-family: Manrope;
   font-size: 36px;
-  font-style: normal;
   font-weight: 700;
   line-height: 40px; /* 111.111% */
   letter-spacing: 1.286px;
-  text-transform: uppercase;
 }
 
 .highlight_text {
@@ -42,4 +123,118 @@
   background-image: url('/public/assets/home//mobile/image-speaker-zx9.png');
   background-position: center;
   background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .highlight_container {
+    margin: 96px auto 0 auto;
+  }
+
+  .zx7_container {
+    width: 689px;
+    background-image: url('/public/assets/home/tablet/image-speaker-zx7.jpg');
+    padding-left: 63.5px;
+  }
+
+  .yx1_container {
+    width: 689px;
+    height: 320px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 11px;
+  }
+
+  .yx1_img {
+    width: 339px;
+    height: 320px;
+    background-image: url('/public/assets/home/tablet/image-earphones-yx1.jpg');
+  }
+
+  .yx1_details {
+    width: 339px;
+    height: 320px;
+    padding-left: 41px;
+  }
+
+  .zx9_container {
+    width: 689px;
+    height: 720px;
+    padding: 0 169px;
+  }
+
+  .highlight_text {
+    margin: 24px 0 40px 0;
+  }
+
+  .zx9_img_container {
+    margin: 55px auto 64px auto;
+  }
+
+  .highlight_title {
+    font-size: 56px;
+    line-height: 58px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .highlight_container {
+    margin: 168px auto 0 auto;
+  }
+
+  .zx9_container {
+    width: 1110px;
+    height: 568px;
+    position: relative;
+  }
+
+  .zx7_container {
+    width: 1110px;
+    background-image: url('/public/assets/home/desktop/image-speaker-zx7.jpg');
+    padding-left: 96.5px;
+  }
+
+  .yx1_container {
+    width: 1110px;
+    column-gap: 30px;
+  }
+
+  .yx1_img {
+    width: 540px;
+    background-image: url('/public/assets/home/desktop/image-earphones-yx1.jpg');
+  }
+
+  .yx1_details {
+    width: 540px;
+    padding-left: 95px;
+  }
+
+  .zx9_details {
+    align-items: flex-start;
+    width: 349px;
+    height: 303px;
+    position: absolute;
+    top: 133px;
+    right: 95px;
+  }
+
+  .zx9_img_container {
+    width: 410px;
+    height: 493px;
+    background-image: url('/public/assets/home/desktop/image-speaker-zx9.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 117.5px;
+    top: 27px;
+  }
+
+  .highlight_text {
+    text-align: left;
+  }
+
+  .highlight_title {
+    text-align: left;
+  }
 }
