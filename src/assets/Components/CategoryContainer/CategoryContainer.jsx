@@ -7,7 +7,7 @@ const CategoryContainer = () => {
       <div className={styles.category_card}>
         <img
           className={styles.headphones_img_container}
-          src="/assets/shared/desktop/image-category-thumbnail-headphones.png"
+          src="assets/shared/desktop/image-category-thumbnail-headphones.png"
           alt=""
         />
         <p className={styles.category_title}>Headphones</p>
@@ -22,7 +22,7 @@ const CategoryContainer = () => {
         <img
           className={styles.headphones_img_container}
           /*  src="/assets/shared/desktop/image-category-thumbnail-speakers.png" */
-          src="/assets/shared/desktop/image-category-thumbnail-speakers.png"
+          src="assets/shared/desktop/image-category-thumbnail-speakers.png"
           alt=""
         />
         <p className={styles.category_title}>Speakers</p>
@@ -36,7 +36,7 @@ const CategoryContainer = () => {
       <div className={styles.category_card}>
         <img
           className={styles.earphones_container}
-          src="/assets/shared/desktop/image-category-thumbnail-earphones.png
+          src="assets/shared/desktop/image-category-thumbnail-earphones.png
           "
           alt=""
         />
@@ -45,7 +45,7 @@ const CategoryContainer = () => {
           className={styles.category_link}
           to={'/R-audiophile-ecommerce/products/earphones'}
         >
-          SHOP
+          SHOP <img src="assets/shared/desktop/icon-arrow-right.svg" alt="" />
         </NavLink>
       </div>
     </div>
