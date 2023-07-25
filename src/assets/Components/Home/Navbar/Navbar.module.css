@@ -1,5 +1,6 @@
 .navbar {
   height: 80px;
+  width: 100vw;
   padding: 0 24px;
   display: flex;
   align-items: center;
@@ -19,6 +20,7 @@
 
 .nav_center {
   width: 100%;
+  min-width: 375px;
   display: flex;
   display: flex;
   justify-content: space-between;

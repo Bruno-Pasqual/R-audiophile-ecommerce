@@ -15,7 +15,7 @@ const CategoryContainer = () => {
           className={styles.category_link}
           to={'/R-audiophile-ecommerce/products/headphones'}
         >
-          SHOP <img src="/assets/shared/desktop/icon-arrow-right.svg" alt="" />
+          SHOP <img src="assets/shared/desktop/icon-arrow-right.svg" alt="" />
         </NavLink>
       </div>
       <div className={styles.category_card}>
@@ -30,7 +30,7 @@ const CategoryContainer = () => {
           className={styles.category_link}
           to={'/R-audiophile-ecommerce/products/speakers'}
         >
-          SHOP <img src="/assets/shared/desktop/icon-arrow-right.svg" alt="" />
+          SHOP <img src="assets/shared/desktop/icon-arrow-right.svg" alt="" />
         </NavLink>
       </div>
       <div className={styles.category_card}>

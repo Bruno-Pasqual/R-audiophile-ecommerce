@@ -15,7 +15,7 @@ body {
 
 main {
   background: white;
-  padding: 40px 24px 0px 24px;
+  /*  padding: 40px 24px 0px 24px; */
 }
 
 .headphones-container {
@@ -23,7 +23,4 @@ main {
 }
 
 @media (min-width: 768px) {
-  main {
-    padding: 148px 40px 0px 39px;
-  }
 }
