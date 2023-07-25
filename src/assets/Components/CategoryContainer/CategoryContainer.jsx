@@ -25,6 +25,7 @@ const CategoryContainer = () => {
       <div className={styles.category_card}>
         <img
           className={styles.headphones_img_container}
+          /*  src="/public/assets/shared/desktop/image-category-thumbnail-speakers.png" */
           src="/public/assets/shared/desktop/image-category-thumbnail-speakers.png"
           alt=""
         />
@@ -52,12 +53,9 @@ const CategoryContainer = () => {
           className={styles.category_link}
           to={'/R-audiophile-ecommerce/products/earphones'}
         >
-          SHOP{' '}
-          <img
-            src="/public/assets/shared/desktop/icon-arrow-right.svg"
-            alt=""
-          />
+          SHOP
         </NavLink>
+        <div className={styles.container_teste}></div>
       </div>
     </div>
   );

@@ -1,3 +1,12 @@
+.container_teste {
+  width: 200px;
+  height: 200px;
+  border: 1px solid red;
+  background-image: url('/public/assets/shared/desktop/image-category-thumbnail-earphones.png');
+  background-position: center;
+  background-size: cover;
+}
+
 .category_container {
   width: 327px;
   height: 676px;
