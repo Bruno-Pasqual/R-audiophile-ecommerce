@@ -4,12 +4,12 @@ import Button from '../../Button/Button';
 
 const ProductCard = ({ product }) => {
   console.log(product);
+
   const { image, name, new: novo, description } = product;
-  console.log(image.mobile);
 
   return (
     <div className={styles.product_card}>
-      <img className={styles.image_container} src={image.mobile} alt="" />
+      <img className={styles.image_container} src={image.desktop} alt="" />
       <div className={styles.details_container}>
         {novo && <p className={styles.new_tag}>New product</p>}
         <p className={styles.product_title}>{name}</p>
