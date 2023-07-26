@@ -18,9 +18,5 @@ main {
   /*  padding: 40px 24px 0px 24px; */
 }
 
-.headphones-container {
-  height: 1000px;
-}
-
 @media (min-width: 768px) {
 }

@@ -1,5 +1,11 @@
+import CategoryPage from '../ProductsPage/ProductsPage';
+
 const Speakers = () => {
-  return <div>Speakers</div>;
+  return (
+    <div>
+      <CategoryPage categoryName={'speakers'} />
+    </div>
+  );
 };
 
 export default Speakers;

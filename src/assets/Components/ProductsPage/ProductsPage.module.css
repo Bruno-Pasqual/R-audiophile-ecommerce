@@ -1,0 +1,17 @@
+.category_page_header {
+  min-width: 375px;
+  height: 102px;
+  background: black;
+  font-size: 28px;
+  text-transform: uppercase;
+  display: grid;
+  place-content: center;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 64px;
+}
+
+.cards_container {
+  display: flex;
+  flex-direction: column-reverse;
+}
