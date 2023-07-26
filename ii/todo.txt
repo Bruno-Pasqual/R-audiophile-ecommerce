@@ -1,1 +1,2 @@
 1 - Deixar as imagens do category container responsivas 
+2 - arrumar as imagens do productPage para ficarem responsivas
