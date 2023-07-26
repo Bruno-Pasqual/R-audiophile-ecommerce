@@ -5,6 +5,7 @@ import Button from '../../Button/Button';
 const ProductCard = ({ product }) => {
   console.log(product);
   const { image, name, new: novo, description } = product;
+  console.log(image.mobile);
 
   return (
     <div className={styles.product_card}>
