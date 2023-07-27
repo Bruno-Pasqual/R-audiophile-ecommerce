@@ -22,7 +22,7 @@ const ProductsDisplay = () => {
     <div className={styles.display_container}>
       <img
         className={styles.header_image}
-        src={`../${image.mobile}`}
+        src={`${'/assets/product-yx1-earphones/mobile/image-product.jpg'}`}
         alt={`image of the product ${name}`}
       />
     </div>
