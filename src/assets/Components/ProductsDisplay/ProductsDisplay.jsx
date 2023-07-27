@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useGlobalContext } from '../../Context';
 import styles from './ProductsDisplay.module.css';
 
@@ -21,7 +22,7 @@ const ProductsDisplay = () => {
     <div className={styles.display_container}>
       <img
         className={styles.header_image}
-        src={'/assets/product-yx1-earphones/mobile/image-product.jpg'}
+        src={`../${image.mobile}`}
         alt={`image of the product ${name}`}
       />
     </div>
