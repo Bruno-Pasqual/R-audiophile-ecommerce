@@ -1,4 +1,4 @@
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useGlobalContext } from '../../Context';
 
 /* eslint-disable react/prop-types */
@@ -9,7 +9,7 @@ const Button = ({
   border = '1px solid black',
 }) => {
   const navigate = useNavigate();
-  const { data } = useGlobalContext();
+  const { data, setSelectedProduct } = useGlobalContext();
 
   const handleClick = (e) => {
     const array = [...e.target.parentElement.children];
@@ -33,11 +33,10 @@ const Button = ({
         return true;
     });
 
+    setSelectedProduct(product);
     navigate(
       `/R-audiophile-ecommerce/products/${product.category}/${product.slug}`
     );
-
-    console.log(product.slug);
   };
 
   const button_style = {

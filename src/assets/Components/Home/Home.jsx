@@ -8,7 +8,6 @@ import Navbar from './Navbar/Navbar';
 
 const Home = () => {
   const values = useGlobalContext();
-  console.log(values);
 
   return (
     <div>

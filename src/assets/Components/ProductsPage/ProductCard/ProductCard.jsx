@@ -6,6 +6,7 @@ const ProductCard = ({ product }) => {
   console.log(product);
 
   const { image, name, new: novo, description } = product;
+  console.log(image.destop);
 
   return (
     <div className={styles.product_card}>

@@ -1,5 +1,19 @@
+import BringingContainer from '../../Components/BringingContainer/bringingContainer';
+import CategoryContainer from '../../Components/CategoryContainer/CategoryContainer';
+import Footer from '../../Components/Footer/Footer';
+import Navbar from '../../Components/Home/Navbar/Navbar';
+import ProductsDisplay from '../../Components/ProductsDisplay/ProductsDisplay';
+
 const YX1_earphones = () => {
-  return <div style={{ color: 'black' }}>YX1_earphones</div>;
+  return (
+    <div>
+      <Navbar />
+      <ProductsDisplay />
+      <CategoryContainer />
+      <BringingContainer />
+      <Footer />
+    </div>
+  );
 };
 
 export default YX1_earphones;

@@ -9,9 +9,19 @@ export const useGlobalContext = () => useContext(GlobalContext);
 const AppContext = ({ children }) => {
   const [name, setName] = useState('peter');
   const [data, setData] = useState(dados);
+  const [selectedProduct, setSelectedProduct] = useState('');
 
   return (
-    <GlobalContext.Provider value={{ name, setName, data, setData }}>
+    <GlobalContext.Provider
+      value={{
+        name,
+        setName,
+        data,
+        setData,
+        selectedProduct,
+        setSelectedProduct,
+      }}
+    >
       {children}
     </GlobalContext.Provider>
   );
