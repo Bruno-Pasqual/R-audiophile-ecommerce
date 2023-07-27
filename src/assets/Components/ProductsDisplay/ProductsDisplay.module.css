@@ -1,0 +1,11 @@
+.display_container {
+  height: 3630px;
+  width: 327px;
+  outline: 1px solid red;
+  margin: 65px auto 120px auto;
+}
+
+.header_image {
+  width: 327px;
+  height: 327px;
+}
