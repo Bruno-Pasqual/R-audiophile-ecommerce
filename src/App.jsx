@@ -43,6 +43,7 @@ function App() {
             path="/R-audiophile-ecommerce/products/speakers/zx9-speaker"
             element={<ZX9_speaker />}
           />
+
           <Route
             path="/R-audiophile-ecommerce/products/earphones/yx1-earphones"
             element={<YX1_earphones />}
