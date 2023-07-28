@@ -28,62 +28,69 @@ const ProductsDisplay = () => {
 
   return (
     <div className={styles.display_container}>
-      <img
-        className={styles.header_image}
-        src={`../${image.mobile}`}
-        alt={`image of the product ${name}`}
-      />
-      {novo && <p className={styles.new_product_tag}>NEW PRODUCT</p>}
-      <h3 className={styles.product_title}>{name}</h3>
-      <p className={styles.product_description}>{description}</p>
-      <p className={styles.product_price}>{`$ ${price}`}</p>
-      <div className={styles.quantity_line}>
-        <QuantityContainer
-          productQuantity={productQuantity}
-          setProductQuantity={setProductQuantity}
+      <div className={styles.header}>
+        <img
+          /*  srcSet={`../${image.mobile} `} */
+          className={styles.header_image}
+          src={`../${image.mobile}`}
+          alt={`image of the product ${name}`}
         />
-        <button className={styles.add_to_cart_btn}>ADD TO CART</button>
-      </div>
-      <div className="features_container">
-        <p className={styles.container_title}>FEATURES</p>
-        <p className={styles.features_text}>{features}</p>
-      </div>
-      <div className={styles.in_the_box_container}>
-        <p className={styles.container_title}>IN THE BOX</p>
-        <ul className={styles.box_list}>
-          {includes.map(({ quantity, item }) => {
-            return (
-              <li key={nanoid()}>
-                <p>
-                  <span>{quantity}x </span> {item}
-                </p>
-              </li>
-            );
-          })}
-        </ul>
-        <div className={styles.galery_container}>
-          <img
-            src={`../${gallery.first.mobile}`}
-            alt=""
-            className={styles.first_image}
-          />
-          <img
-            src={`../${gallery.second.mobile}`}
-            alt=""
-            className={styles.second_image}
-          />
-          <img
-            src={`../${gallery.third.mobile}`}
-            alt=""
-            className={styles.third_image}
-          />
+        <div className={styles.details_container}>
+          {novo && <p className={styles.new_product_tag}>NEW PRODUCT</p>}
+          <h3 className={styles.product_title}>{name}</h3>
+          <p className={styles.product_description}>{description}</p>
+          <p className={styles.product_price}>{`$ ${price}`}</p>
+          <div className={styles.quantity_line}>
+            <QuantityContainer
+              productQuantity={productQuantity}
+              setProductQuantity={setProductQuantity}
+            />
+            <button className={styles.add_to_cart_btn}>ADD TO CART</button>
+          </div>
         </div>
-        <AlsoLikeContainer
-          data={data}
-          others={others}
-          setSelectedProduct={setSelectedProduct}
+      </div>
+      <div className={styles.features_in_the_box_wrapper}>
+        <div className={styles.features_container}>
+          <p className={styles.container_title}>FEATURES</p>
+          <p className={styles.features_text}>{features}</p>
+        </div>
+        <div className={styles.in_the_box_container}>
+          <p className={styles.container_title}>IN THE BOX</p>
+          <ul className={styles.box_list}>
+            {includes.map(({ quantity, item }) => {
+              return (
+                <li key={nanoid()}>
+                  <p>
+                    <span>{quantity}x </span> {item}
+                  </p>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+      <div className={styles.gallery_container}>
+        <img
+          src={`../${gallery.first.mobile}`}
+          alt=""
+          className={styles.first_image}
+        />
+        <img
+          src={`../${gallery.second.mobile}`}
+          alt=""
+          className={styles.second_image}
+        />
+        <img
+          src={`../${gallery.third.mobile}`}
+          alt=""
+          className={styles.third_image}
         />
       </div>
+      <AlsoLikeContainer
+        data={data}
+        others={others}
+        setSelectedProduct={setSelectedProduct}
+      />
     </div>
   );
 };

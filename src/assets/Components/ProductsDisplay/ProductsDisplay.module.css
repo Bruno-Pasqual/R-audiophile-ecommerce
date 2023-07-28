@@ -1,5 +1,4 @@
 .display_container {
-  height: 3630px;
   width: 375px;
   margin: 65px auto 120px auto;
   padding: 0 24px;
@@ -131,7 +130,7 @@ ul {
   text-transform: uppercase;
 }
 
-.galery_container {
+.gallery_container {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
@@ -180,4 +179,165 @@ ul {
   background: #d87d4a;
   color: white;
   border: none;
+}
+
+@media (min-width: 768px) {
+  .display_container {
+    width: 768px;
+    /* height: 480px; */
+    padding: 0 39px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 120px;
+  }
+
+  .header_image {
+    width: 281px;
+    height: 480px;
+    margin: 0;
+  }
+
+  .details_container {
+    width: 340px;
+    height: 390px;
+  }
+
+  .product_title {
+    margin-bottom: 32px;
+  }
+
+  .new_product_tag {
+    margin: 0 0 17px 0;
+  }
+
+  .product_description {
+    margin-bottom: 32px;
+  }
+
+  .product_price {
+    margin-bottom: 31px;
+  }
+
+  .features_text {
+    margin-bottom: 120px;
+  }
+
+  /* In the box  */
+  .in_the_box_container {
+    display: flex;
+    column-gap: 163px;
+    /* margin-bottom: 120px; */
+  }
+
+  .gallery_container {
+    width: 690px;
+    height: 368px;
+    position: relative;
+  }
+
+  .first_image,
+  .second_image {
+    width: 277px;
+  }
+
+  .third_image {
+    width: 395px;
+    position: absolute;
+    right: 0;
+  }
+
+  /* Also_like_container */
+
+  .also_like_container {
+    width: 691px;
+    height: 471px;
+    column-gap: 11px;
+    flex-direction: row;
+  }
+
+  .also_like_img {
+    width: 223px;
+    height: 318px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .display_container {
+    width: 1440px;
+    padding: 0 165px;
+  }
+
+  .header {
+    justify-content: center;
+    column-gap: 125px;
+  }
+
+  .header_image {
+    width: 540px;
+    height: 560px;
+  }
+
+  .details_container {
+    width: 445px;
+    height: 390px;
+  }
+
+  .product_title {
+    padding-right: 100px;
+  }
+
+  /* features and in the box */
+  .features_container {
+    width: 635px;
+  }
+
+  .in_the_box_container {
+    flex-direction: column;
+  }
+
+  .features_in_the_box_wrapper {
+    display: flex;
+    column-gap: 125px;
+  }
+
+  /* Gallery */
+
+  .gallery_container {
+    width: 1110px;
+    height: 592px;
+    row-gap: 32px;
+  }
+
+  .first_image,
+  .second_image {
+    width: 445px;
+    height: 288px;
+  }
+
+  .third_image {
+    width: 635px;
+    height: 592px;
+  }
+
+  /* Also like container */
+
+  .also_like_container {
+    margin-bottom: 320px;
+    column-gap: 30px;
+  }
+
+  .also_like_card {
+    margin-top: 160px;
+    width: 1110px;
+    height: 571px;
+  }
+
+  .also_like_img {
+    width: 350px;
+    height: 318px;
+  }
 }
