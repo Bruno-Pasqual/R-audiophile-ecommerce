@@ -9,6 +9,7 @@ export const useGlobalContext = () => useContext(GlobalContext);
 const AppContext = ({ children }) => {
   const [name, setName] = useState('peter');
   const [data, setData] = useState(dados);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState('');
 
   return (
@@ -20,6 +21,8 @@ const AppContext = ({ children }) => {
         setData,
         selectedProduct,
         setSelectedProduct,
+        menuOpen,
+        setMenuOpen,
       }}
     >
       {children}

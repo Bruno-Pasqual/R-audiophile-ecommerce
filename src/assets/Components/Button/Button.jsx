@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useGlobalContext } from '../../Context';
+import styles from './Button.module.css';
 
 /* eslint-disable react/prop-types */
 const Button = ({
@@ -52,7 +53,11 @@ const Button = ({
   };
 
   return (
-    <button onClick={handleClick} style={button_style}>
+    <button
+      onClick={handleClick}
+      style={button_style}
+      className={styles.generic_button}
+    >
       {text}
     </button>
   );

@@ -12,7 +12,6 @@ const ProductsPage = ({ categoryName }) => {
   const correspondingArray = data.filter(
     (product) => product.category === categoryName
   );
-  console.log(correspondingArray);
 
   return (
     <div className={styles.products_page}>

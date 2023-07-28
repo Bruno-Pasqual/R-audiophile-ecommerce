@@ -54,6 +54,13 @@
     height: 706px;
     row-gap: 52px;
   }
+
+  .image_container {
+    width: 689px;
+    height: 352px;
+    object-fit: contain;
+    background: #f1f1f1;
+  }
 }
 @media (min-width: 1440px) {
   .product_card {

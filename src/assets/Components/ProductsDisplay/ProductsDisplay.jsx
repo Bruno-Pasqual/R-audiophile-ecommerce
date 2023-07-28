@@ -1,15 +1,15 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useGlobalContext } from '../../Context';
 import styles from './ProductsDisplay.module.css';
 import { nanoid } from 'nanoid';
 import { useNavigate } from 'react-router-dom';
 
 const ProductsDisplay = () => {
+  const { selectedProduct, data, setSelectedProduct, imageSize } =
+    useGlobalContext();
   const [productQuantity, setProductQuantity] = useState(5);
-
-  const { selectedProduct, data, setSelectedProduct } = useGlobalContext();
 
   let {
     category,
@@ -24,7 +24,6 @@ const ProductsDisplay = () => {
     image,
   } = selectedProduct;
   price = price.toLocaleString();
-  console.log(others);
 
   return (
     <div className={styles.display_container}>
@@ -32,7 +31,7 @@ const ProductsDisplay = () => {
         <img
           /*  srcSet={`../${image.mobile} `} */
           className={styles.header_image}
-          src={`../${image.mobile}`}
+          src={`../${image.desktop}`}
           alt={`image of the product ${name}`}
         />
         <div className={styles.details_container}>
@@ -71,17 +70,17 @@ const ProductsDisplay = () => {
       </div>
       <div className={styles.gallery_container}>
         <img
-          src={`../${gallery.first.mobile}`}
+          src={`../${gallery.first[imageSize]}`}
           alt=""
           className={styles.first_image}
         />
         <img
-          src={`../${gallery.second.mobile}`}
+          src={`../${gallery.second[imageSize]}`}
           alt=""
           className={styles.second_image}
         />
         <img
-          src={`../${gallery.third.mobile}`}
+          src={`../${gallery.third[imageSize]}`}
           alt=""
           className={styles.third_image}
         />
@@ -90,6 +89,7 @@ const ProductsDisplay = () => {
         data={data}
         others={others}
         setSelectedProduct={setSelectedProduct}
+        imageSize={imageSize}
       />
     </div>
   );
@@ -126,7 +126,7 @@ const QuantityContainer = ({ productQuantity, setProductQuantity }) => {
   );
 };
 
-const AlsoLikeContainer = ({ others, data, setSelectedProduct }) => {
+const AlsoLikeContainer = ({ others, data, setSelectedProduct, imageSize }) => {
   const navigate = useNavigate();
 
   const handleClick = (slug) => {
@@ -145,7 +145,7 @@ const AlsoLikeContainer = ({ others, data, setSelectedProduct }) => {
           <div className={styles.also_like_card} key={nanoid()}>
             <img
               className={styles.also_like_img}
-              src={`../${image.mobile}`}
+              src={`../${image.desktop}`}
               alt=""
             />
             <p className={styles.container_title}>{name}</p>

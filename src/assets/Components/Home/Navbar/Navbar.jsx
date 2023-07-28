@@ -1,8 +1,17 @@
+import { useRef } from 'react';
+import { useGlobalContext } from '../../../Context';
+import CategoryContainer from '../../CategoryContainer/CategoryContainer';
 import Hamburguer from '../../Hamburguer/Hamburguer';
+
 import styles from './Navbar.module.css';
 import { NavLink } from 'react-router-dom';
+import './modal.css';
 
 const Navbar = () => {
+  const { menuOpen } = useGlobalContext();
+  const refModal = useRef(null);
+  console.log(refModal);
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.nav_center}>
@@ -41,6 +50,13 @@ const Navbar = () => {
             fillRule="nonzero"
           />
         </svg>
+      </div>
+
+      <div
+        ref={refModal}
+        className={menuOpen ? 'category_menu ativo' : 'category_menu'}
+      >
+        <CategoryContainer />
       </div>
     </nav>
   );

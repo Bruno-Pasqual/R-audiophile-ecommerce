@@ -130,6 +130,11 @@ ul {
   text-transform: uppercase;
 }
 
+.add_to_cart_btn:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
 .gallery_container {
   display: flex;
   flex-direction: column;
@@ -160,7 +165,7 @@ ul {
 
 .also_like_container {
   width: 327px;
-  height: 983px;
+  /* height: 983px; */
   margin-top: 120px;
   display: flex;
   flex-direction: column;
@@ -181,6 +186,11 @@ ul {
   border: none;
 }
 
+.also_like_btn:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
 @media (min-width: 768px) {
   .display_container {
     width: 768px;
@@ -199,6 +209,8 @@ ul {
     width: 281px;
     height: 480px;
     margin: 0;
+    object-fit: contain;
+    background: #f1f1f1;
   }
 
   .details_container {
@@ -262,6 +274,7 @@ ul {
   .also_like_img {
     width: 223px;
     height: 318px;
+    object-fit: contain;
   }
 }
 
