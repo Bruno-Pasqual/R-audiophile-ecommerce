@@ -7,8 +7,6 @@ import HighlightsContainer from '../HighlightsContainer/HighlightsContainer';
 import Navbar from './Navbar/Navbar';
 
 const Home = () => {
-  const values = useGlobalContext();
-
   return (
     <div>
       <Navbar />

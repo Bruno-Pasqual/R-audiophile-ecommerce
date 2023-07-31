@@ -53,6 +53,7 @@ const Navbar = () => {
       </div>
 
       <div
+        onScroll={() => console.log('eai')}
         ref={refModal}
         className={menuOpen ? 'category_menu ativo' : 'category_menu'}
       >

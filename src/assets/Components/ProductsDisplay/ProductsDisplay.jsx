@@ -23,6 +23,7 @@ const ProductsDisplay = () => {
     others,
     image,
   } = selectedProduct;
+  console.log(gallery);
   price = price.toLocaleString();
 
   return (
@@ -70,17 +71,17 @@ const ProductsDisplay = () => {
       </div>
       <div className={styles.gallery_container}>
         <img
-          src={`../${gallery.first[imageSize]}`}
+          src={`../${gallery.first.tablet}`}
           alt=""
           className={styles.first_image}
         />
         <img
-          src={`../${gallery.second[imageSize]}`}
+          src={`../${gallery.second.tablet}`}
           alt=""
           className={styles.second_image}
         />
         <img
-          src={`../${gallery.third[imageSize]}`}
+          src={`../${gallery.third.tablet}`}
           alt=""
           className={styles.third_image}
         />

@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 import { useGlobalContext } from '../../Context';
 import ProductCard from './ProductCard/ProductCard';
-import styles from './ProductsPage.module.css';
+/* import styles from './ProductsPage.module.css'; */
 import { nanoid } from 'nanoid';
+import './ProductsPage.css';
 
 const ProductsPage = ({ categoryName }) => {
   //Using
@@ -14,9 +15,9 @@ const ProductsPage = ({ categoryName }) => {
   );
 
   return (
-    <div className={styles.products_page}>
-      <header className={styles.category_page_header}>{categoryName}</header>
-      <div className={styles.cards_container}>
+    <div className="products_page ativo">
+      <header className="category_page_header">{categoryName}</header>
+      <div className="cards_container">
         {correspondingArray.map((product) => (
           <ProductCard product={product} key={nanoid()} />
         ))}

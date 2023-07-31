@@ -2,8 +2,7 @@ import { useGlobalContext } from '../../Context';
 import styles from './Hamburguer.module.css';
 
 const Hamburguer = () => {
-  const { menuOpen, setMenuOpen } = useGlobalContext();
-  console.log(menuOpen);
+  const { setMenuOpen } = useGlobalContext();
 
   const handleClick = () => {
     setMenuOpen((previous) => {
