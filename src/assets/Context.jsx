@@ -11,6 +11,8 @@ const AppContext = ({ children }) => {
   const [data, setData] = useState(dados);
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState('');
+  const [cartOpen, setCartOpen] = useState(false);
+  const [cartProducts, setCartProducts] = useState([]);
 
   return (
     <GlobalContext.Provider
@@ -23,6 +25,10 @@ const AppContext = ({ children }) => {
         setSelectedProduct,
         menuOpen,
         setMenuOpen,
+        cartOpen,
+        setCartOpen,
+        cartProducts,
+        setCartProducts,
       }}
     >
       {children}

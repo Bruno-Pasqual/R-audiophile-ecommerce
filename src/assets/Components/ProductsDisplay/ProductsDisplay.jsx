@@ -5,11 +5,18 @@ import { useGlobalContext } from '../../Context';
 import styles from './ProductsDisplay.module.css';
 import { nanoid } from 'nanoid';
 import { useNavigate } from 'react-router-dom';
+import AddToCart from '../../Functions/AddToCart';
 
 const ProductsDisplay = () => {
-  const { selectedProduct, data, setSelectedProduct, imageSize } =
-    useGlobalContext();
-  const [productQuantity, setProductQuantity] = useState(5);
+  const {
+    selectedProduct,
+    data,
+    setSelectedProduct,
+    imageSize,
+    cartProducts,
+    setCartProducts,
+  } = useGlobalContext();
+  const [productQuantity, setProductQuantity] = useState(0);
 
   let {
     category,
@@ -23,7 +30,17 @@ const ProductsDisplay = () => {
     others,
     image,
   } = selectedProduct;
-  console.log(gallery);
+
+  const handleAddToCart = () => {
+    const product = {
+      name: name,
+      product: selectedProduct,
+      quantity: productQuantity,
+    };
+
+    AddToCart(product, cartProducts, setCartProducts);
+  };
+
   price = price.toLocaleString();
 
   return (
@@ -45,7 +62,12 @@ const ProductsDisplay = () => {
               productQuantity={productQuantity}
               setProductQuantity={setProductQuantity}
             />
-            <button className={styles.add_to_cart_btn}>ADD TO CART</button>
+            <button
+              onClick={handleAddToCart}
+              className={styles.add_to_cart_btn}
+            >
+              ADD TO CART
+            </button>
           </div>
         </div>
       </div>
