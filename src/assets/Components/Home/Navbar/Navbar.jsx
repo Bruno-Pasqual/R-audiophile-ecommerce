@@ -5,11 +5,27 @@ import Hamburguer from '../../Hamburguer/Hamburguer';
 import styles from './Navbar.module.css';
 import { NavLink } from 'react-router-dom';
 import './modal.css';
+import CartProductCard from '../../CartContainer/CartProductCard';
+import { nanoid } from 'nanoid';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { AiOutlineClose } from 'react-icons/ai';
 
 const Navbar = () => {
-  const { menuOpen, cartOpen, setCartOpen, cartProducts } = useGlobalContext();
+  const { menuOpen, cartOpen, setCartOpen, cartProducts, setCartProducts } =
+    useGlobalContext();
   const refModal = useRef(null);
   const refCartModal = useRef(null);
+
+  //Calculing the prices of in cart products
+  const total = cartProducts?.reduce((accumulator, product) => {
+    return accumulator + product.price * product.quantity;
+  }, 0);
+
+  // handleRemove
+
+  const handleRemoveAll = () => {
+    setCartProducts([]);
+  };
 
   const handleCartClick = () => {
     setCartOpen((previous) => {
@@ -79,21 +95,50 @@ const Navbar = () => {
       </div>
       {/* Modal do cart Menu, contendo os produtos que foram adicionados no carrinho */}
       <dialog ref={refCartModal} open={true} className="cartModalContainer">
-        <div className="cart_modal_header">
-          <p className="cart_title">CART (3)</p>
-          <button className="remove_all_btn">Remove all</button>
-        </div>
+        {cartProducts.length < 1 ? (
+          <div className="empty_cart">
+            <AiOutlineClose
+              className="close_btn_icon"
+              onClick={() =>
+                setCartOpen((previous) => {
+                  !previous;
+                })
+              }
+            />
 
-        <button
-          onClick={() =>
-            setCartOpen((previous) => {
-              !previous;
-            })
-          }
-          className="close_modal_btn"
-        >
-          X
-        </button>
+            <AiOutlineShoppingCart className="react_icon" />
+            <p className="empty_cart_text">Your Cart is currently empty!</p>
+          </div>
+        ) : (
+          <>
+            <div className="cart_modal_header">
+              <p className="cart_title">CART ({cartProducts.length})</p>
+              <button onClick={handleRemoveAll} className="remove_all_btn">
+                Remove all
+              </button>
+            </div>
+            <div className={'cart_cards_container'}>
+              {cartProducts.map((product) => (
+                <CartProductCard product={product} key={nanoid()} />
+              ))}
+            </div>
+            <AiOutlineClose
+              className="close_btn_icon"
+              onClick={() =>
+                setCartOpen((previous) => {
+                  !previous;
+                })
+              }
+            />
+            <div className="footer_container">
+              <div className="price_line">
+                <p className="price_tag">TOTAL</p>
+                <p className="price">$ {total.toLocaleString()}</p>
+              </div>
+              <button className="checkout_btn">CHECKOUT</button>
+            </div>
+          </>
+        )}
       </dialog>
     </nav>
   );

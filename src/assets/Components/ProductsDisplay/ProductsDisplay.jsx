@@ -30,18 +30,16 @@ const ProductsDisplay = () => {
     others,
     image,
   } = selectedProduct;
-
   const handleAddToCart = () => {
     const product = {
       name: name,
       product: selectedProduct,
       quantity: productQuantity,
+      price: price,
     };
 
     AddToCart(product, cartProducts, setCartProducts);
   };
-
-  price = price.toLocaleString();
 
   return (
     <div className={styles.display_container}>
@@ -56,7 +54,9 @@ const ProductsDisplay = () => {
           {novo && <p className={styles.new_product_tag}>NEW PRODUCT</p>}
           <h3 className={styles.product_title}>{name}</h3>
           <p className={styles.product_description}>{description}</p>
-          <p className={styles.product_price}>{`$ ${price}`}</p>
+          <p
+            className={styles.product_price}
+          >{`$ ${price.toLocaleString()}`}</p>
           <div className={styles.quantity_line}>
             <QuantityContainer
               productQuantity={productQuantity}
