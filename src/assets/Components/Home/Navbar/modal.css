@@ -152,3 +152,16 @@
   right: 5px;
   cursor: pointer;
 }
+
+@media (min-width: 768px) {
+  .cartModalContainer {
+    width: 377px;
+    left: 75%;
+  }
+
+  .checkout_btn {
+    width: 313px;
+  }
+}
+@media (min-width: 1440px) {
+}
