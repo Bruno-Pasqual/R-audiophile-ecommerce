@@ -1,0 +1,51 @@
+.input_container {
+  position: relative;
+  width: fit-content;
+}
+
+.input_title {
+  color: #000;
+  font-family: Manrope;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -0.214px;
+}
+
+.input_title.error {
+  color: #cd2c2c;
+}
+
+.input_field {
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+  padding-left: 24px;
+  caret-color: #d87d4a;
+  margin-top: 9px;
+  cursor: pointer;
+}
+
+.input_field.error {
+  border: 2px solid #cd2c2c;
+}
+
+.input_field:focus {
+  outline: 1px solid #d87d4a;
+}
+
+.input_field::placeholder {
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  opacity: 0.4;
+}
+
+.error_message {
+  color: #cd2c2c;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.214px;
+  position: absolute;
+  right: 0;
+}

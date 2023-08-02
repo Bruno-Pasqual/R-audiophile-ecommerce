@@ -11,6 +11,7 @@ import YX1_earphones from './assets/Pages/YX1_earphones/YX1_earphones';
 import XX99_mark_one from './assets/Pages/xx99-mark-one/XX99_mark_one';
 import XX99_mark_two from './assets/Pages/xx99-mark-two/XX99_mark_two';
 import XX59_headphones from './assets/Pages/xx59/XX59_headphones';
+import CheckoutPage from './assets/Pages/CheckoutPage/CheckoutPage';
 
 function App() {
   return (
@@ -47,6 +48,10 @@ function App() {
           <Route
             path="/R-audiophile-ecommerce/products/earphones/yx1-earphones"
             element={<YX1_earphones />}
+          />
+          <Route
+            path="/R-audiophile-ecommerce/products/checkout"
+            element={<CheckoutPage />}
           />
         </Routes>
       </BrowserRouter>

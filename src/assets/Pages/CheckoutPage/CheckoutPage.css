@@ -1,0 +1,28 @@
+body {
+}
+
+.checkoutPage {
+  background: #fafafa;
+  height: 2184px;
+}
+
+form {
+  width: 327px;
+  height: 1378px;
+  background: white;
+  margin: 65px auto 0 auto;
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.container_title {
+  color: #d87d4a;
+  font-family: Manrope;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px; /* 192.308% */
+  letter-spacing: 0.929px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}

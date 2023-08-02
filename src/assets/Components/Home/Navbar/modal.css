@@ -35,7 +35,6 @@
   top: 350px;
   left: 50%;
   padding: 32px 28px;
-
   row-gap: 31px;
 }
 
@@ -83,7 +82,8 @@
   row-gap: 24px;
   margin: 31px 0;
   height: 240px;
-  overflow-y: scroll;
+  overflow-y: auto;
+  padding-right: 10px;
 }
 
 .price_line {
