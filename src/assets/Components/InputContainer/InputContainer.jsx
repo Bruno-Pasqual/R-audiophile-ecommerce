@@ -4,7 +4,7 @@ import './InputContainer.css';
 import checkInput from '../../Functions/checkInput';
 
 const InputContainer = ({
-  inputWidth = '280px',
+  /*   inputWidth = '280px', */
   inputHeight = '56px',
   inputType = 'text',
   placeHolderText = 'digite algo',
@@ -12,7 +12,7 @@ const InputContainer = ({
   /*   ref, */
 }) => {
   const inputStyle = {
-    width: inputWidth,
+    /*    width: inputWidth, */
     height: inputHeight,
     fontWeight: '700',
     color: 'black',

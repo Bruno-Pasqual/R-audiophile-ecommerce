@@ -135,7 +135,14 @@ const Navbar = () => {
                 <p className="price_tag">TOTAL</p>
                 <p className="price">$ {total.toLocaleString()}</p>
               </div>
-              <NavLink to={'/R-audiophile-ecommerce/products/checkout'}>
+              <NavLink
+                onClick={() =>
+                  setCartOpen((previous) => {
+                    !previous;
+                  })
+                }
+                to={'/R-audiophile-ecommerce/products/checkout'}
+              >
                 <button className="checkout_btn">CHECKOUT</button>
               </NavLink>
             </div>

@@ -22,6 +22,7 @@
   caret-color: #d87d4a;
   margin-top: 9px;
   cursor: pointer;
+  width: 280px;
 }
 
 .input_field.error {
@@ -48,4 +49,16 @@
   letter-spacing: -0.214px;
   position: absolute;
   right: 0;
+}
+
+@media (min-width: 768px) {
+  .input_field {
+    width: 279px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .input_field {
+    width: 304px;
+  }
 }
