@@ -2,12 +2,24 @@
 import { useGlobalContext } from '../../Context';
 import { nanoid } from 'nanoid';
 import './SummaryContainer.css';
+import { useEffect, useRef, useState } from 'react';
+import OrderContainer from '../OrderContainer/OrderContainer';
 
 const SummaryContainer = () => {
   const { cartProducts } = useGlobalContext();
+  const [showModal, setShowModal] = useState(true);
+  const orderRef = useRef(null);
   const totalValue = cartProducts.reduce((acc, product) => {
     return (acc += product.price * product.quantity);
   }, 0);
+
+  useEffect(() => {
+    if (showModal) {
+      orderRef.current?.showModal();
+    } else {
+      orderRef.current.close();
+    }
+  }, [showModal]);
 
   console.log(totalValue);
 
@@ -39,14 +51,17 @@ const SummaryContainer = () => {
           </p>
         </div>
       </div>
-      <button className="continue_btn">Continue e pay</button>
+      <button className="continue_btn">Continue & pay</button>
+      <dialog className="order_modal" ref={orderRef}>
+        <OrderContainer />
+      </dialog>
     </div>
   );
 };
 
 export default SummaryContainer;
 
-const SummaryCard = ({ product }) => {
+export const SummaryCard = ({ product }) => {
   return (
     <div className="summary_card">
       <img className="product_img" src={product.product.image.tablet} alt="" />

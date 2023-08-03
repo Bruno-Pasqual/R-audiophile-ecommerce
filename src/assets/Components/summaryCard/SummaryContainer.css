@@ -3,6 +3,7 @@
   background: white;
   padding: 32px 24px;
   margin: 0 auto 97px auto;
+  border-radius: 8px;
 }
 
 .summary_card {
@@ -110,4 +111,32 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-top: 32px;
+  cursor: pointer;
+}
+
+.continue_btn:hover {
+  background: #fbaf85;
+}
+
+.order_modal {
+  width: 327px;
+  height: 660px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border: transparent;
+  outline-color: transparent;
+  border-radius: 8px;
+}
+
+.order_modal::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 1440px) {
+  .summary_container {
+    width: 350px;
+    height: auto;
+  }
 }

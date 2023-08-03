@@ -13,6 +13,8 @@ label {
   display: flex;
   flex-direction: column;
   row-gap: 16px;
+  position: absolute;
+  right: 0;
 }
 
 .line {

@@ -14,7 +14,7 @@ const CheckoutPage = () => {
       <Navbar />
       <div className="checkoutPage">
         <form action="">
-          <h2>CHECKOUT</h2>
+          <h2 className="page_title">CHECKOUT</h2>
           <div className="billing_details_container">
             <h4 className="container_title">Billing details</h4>
             <div className="inputs_container">
@@ -82,8 +82,8 @@ const CheckoutPage = () => {
               )}
             </div>
           </div>
-          <SummaryContainer />
         </form>
+        <SummaryContainer />
       </div>
 
       <Footer />
