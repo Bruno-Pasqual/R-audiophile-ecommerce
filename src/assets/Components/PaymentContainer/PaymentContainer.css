@@ -13,7 +13,6 @@ label {
   display: flex;
   flex-direction: column;
   row-gap: 16px;
-  position: absolute;
   right: 0;
 }
 
@@ -29,4 +28,10 @@ label {
 
 .line.ativo {
   border: 1px solid #d87d4a;
+}
+
+@media (min-width: 1440px) {
+  .payment_method_container {
+    margin-left: 49px;
+  }
 }

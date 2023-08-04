@@ -3,9 +3,10 @@ import { useState } from 'react';
 import { useGlobalContext } from '../../Context';
 import './OrderContainer.css';
 import { nanoid } from 'nanoid';
+import { NavLink } from 'react-router-dom';
 
-const OrderContainer = () => {
-  const { cartProducts } = useGlobalContext();
+const OrderContainer = ({ totalValue }) => {
+  const { cartProducts, setCartProducts } = useGlobalContext();
   const [showMore, setShowMore] = useState(false);
 
   return (
@@ -25,23 +26,42 @@ const OrderContainer = () => {
         You will receive an email confirmation shortly
       </p>
       <div className="products_container">
-        <div className="cards_container">
-          {showMore &&
-            cartProducts.map((product) => {
-              return <OrderCard product={product} key={nanoid()} />;
-            })}
-          {!showMore && <OrderCard product={cartProducts[0]} key={nanoid()} />}
+        <div className="left_wrapper">
+          <div className="cards_container">
+            {showMore &&
+              cartProducts.map((product) => {
+                return <OrderCard product={product} key={nanoid()} />;
+              })}
+            {!showMore && (
+              <OrderCard product={cartProducts[0]} key={nanoid()} />
+            )}
+          </div>
+          {cartProducts.length > 1 && (
+            <button
+              className="show_btn"
+              onClick={() =>
+                setShowMore((current) => {
+                  return !current;
+                })
+              }
+            >
+              {showMore
+                ? 'Show less'
+                : `and ${cartProducts.length - 1} other item(s)`}
+            </button>
+          )}
         </div>
-        {cartProducts.length > 1 && (
-          <button
-            onClick={() =>
-              setShowMore((current) => {
-                return !current;
-              })
-            }
-          >{`and ${cartProducts.length - 1} item(s)`}</button>
-        )}
+        <div className="grand_total_container">
+          <p className="grand_title">Grand Total</p>
+          <p className="grand_price">$ {totalValue.toLocaleString()}</p>
+        </div>
       </div>
+
+      <NavLink to={'/R-audiophile-ecommerce/'}>
+        <button onClick={() => setCartProducts([])} className="back_home_btn">
+          Back to home
+        </button>
+      </NavLink>
     </div>
   );
 };

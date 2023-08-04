@@ -7,7 +7,7 @@ import OrderContainer from '../OrderContainer/OrderContainer';
 
 const SummaryContainer = () => {
   const { cartProducts } = useGlobalContext();
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
   const orderRef = useRef(null);
   const totalValue = cartProducts.reduce((acc, product) => {
     return (acc += product.price * product.quantity);
@@ -25,36 +25,49 @@ const SummaryContainer = () => {
 
   return (
     <div className="summary_container">
-      <h2>Summary</h2>
-      <div className="cards_container">
-        {cartProducts.map((product) => {
-          return <SummaryCard product={product} key={nanoid()} />;
-        })}
-      </div>
-      <div className="total_container">
-        <div className="summary_line">
-          <p className="tag">Total</p>
-          <p className="value">${totalValue.toLocaleString()}</p>
-        </div>
-        <div className="summary_line">
-          <p className="tag">Shipping</p>
-          <p className="value">${50}</p>
-        </div>
-        <div className="summary_line">
-          <p className="tag">Vat(included)</p>
-          <p className="value">${(totalValue * 0.1).toLocaleString()}</p>
-        </div>
-        <div className="summary_line">
-          <p className="tag">grand total</p>
-          <p className="value last_value">
-            ${(totalValue + 50).toLocaleString()}
-          </p>
-        </div>
-      </div>
-      <button className="continue_btn">Continue & pay</button>
-      <dialog className="order_modal" ref={orderRef}>
-        <OrderContainer />
-      </dialog>
+      {cartProducts.length >= 1 && (
+        <>
+          <h2 className="summary_title">Summary</h2>
+          <div className="cards_container">
+            {cartProducts.map((product) => {
+              return <SummaryCard product={product} key={nanoid()} />;
+            })}
+          </div>
+          <div className="total_container">
+            <div className="summary_line">
+              <p className="tag">Total</p>
+              <p className="value">${totalValue.toLocaleString()}</p>
+            </div>
+            <div className="summary_line">
+              <p className="tag">Shipping</p>
+              <p className="value">${50}</p>
+            </div>
+            <div className="summary_line">
+              <p className="tag">Vat(included)</p>
+              <p className="value">${(totalValue * 0.1).toLocaleString()}</p>
+            </div>
+            <div className="summary_line">
+              <p className="tag">grand total</p>
+              <p className="value last_value">
+                ${(totalValue + 50).toLocaleString()}
+              </p>
+            </div>
+          </div>
+          <button
+            className="continue_btn"
+            onClick={() =>
+              setShowModal((current) => {
+                return !current;
+              })
+            }
+          >
+            Continue & pay
+          </button>
+          <dialog className="order_modal" ref={orderRef}>
+            <OrderContainer totalValue={totalValue} />
+          </dialog>
+        </>
+      )}
     </div>
   );
 };

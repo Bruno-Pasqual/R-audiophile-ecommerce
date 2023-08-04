@@ -5,12 +5,16 @@ import InputContainer from '../../Components/InputContainer/InputContainer';
 import PaymentContainer from '../../Components/PaymentContainer/PaymentContainer';
 import './CheckoutPage.css';
 import SummaryContainer from '../../Components/summaryCard/SummaryContainer';
+import { Navigate } from 'react-router-dom';
+import { useGlobalContext } from '../../Context';
 
 const CheckoutPage = () => {
   const [input, setInput] = useState(null);
+  const { cartProducts } = useGlobalContext();
 
   return (
     <div style={{ background: '#FAFAFA' }}>
+      {cartProducts.length < 1 && <Navigate to={'/R-audiophile-ecommerce'} />}
       <Navbar />
       <div className="checkoutPage">
         <form action="">
@@ -60,7 +64,7 @@ const CheckoutPage = () => {
               />
             </div>
           </div>
-          <div className="billing_details_container">
+          <div className="payment_method_wrapper">
             <h4 className="container_title">Payment details</h4>
             <div className="inputs_container">
               <h2 className="payment_method_title">Payment Method</h2>
