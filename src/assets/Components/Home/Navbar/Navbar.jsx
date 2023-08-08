@@ -87,12 +87,12 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div
+      <dialog
         ref={refModal}
         className={menuOpen ? 'category_menu ativo' : 'category_menu'}
       >
         <CategoryContainer />
-      </div>
+      </dialog>
       {/* Modal do cart Menu, contendo os produtos que foram adicionados no carrinho */}
       <dialog ref={refCartModal} open={true} className="cartModalContainer">
         {cartProducts.length < 1 ? (

@@ -9,6 +9,7 @@ import { Navigate } from 'react-router-dom';
 import { useGlobalContext } from '../../Context';
 
 const CheckoutPage = () => {
+  window.scrollTo(0, 0);
   const [input, setInput] = useState(null);
   const { cartProducts } = useGlobalContext();
 

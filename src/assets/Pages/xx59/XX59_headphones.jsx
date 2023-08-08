@@ -5,6 +5,7 @@ import Navbar from '../../Components/Home/Navbar/Navbar';
 import ProductsDisplay from '../../Components/ProductsDisplay/ProductsDisplay';
 
 const XX59_headphones = () => {
+  window.scrollTo(0, 0);
   return (
     <div>
       <Navbar />
